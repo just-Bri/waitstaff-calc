@@ -2,8 +2,8 @@
 Waitstaff tip calculator
 
 ## Todo
-..* ~~HTML~~
+  * ~~HTML~~
 
-..* JS functions
+  * JS functions
 
-..* JS Testing
+  * JS Testing
