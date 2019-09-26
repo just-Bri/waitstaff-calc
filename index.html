@@ -13,17 +13,17 @@
   <section class="meal-details">
     <heading>Enter the Meal Details</heading>
     <form action="submit" name='meal-info' class="js-meal-details">
-      <section class="price">
+      <section class="meal-price">
         <label for="meal-info" class="label-base-price">Base Meal Price: $</label>
-        <input type='text' name='meal-info' class='input-base-price' value='0.00' />
+        <input type='text' name='meal-info' id='input-base-price' value='0.00' />
       </section>
-      <section class="tax">
+      <section class="meal-tax">
         <label for="meal-info" class="label-tax-rate">Tax Rate: %</label>
-        <input type='text' name='meal-info' class='input-tax-rate' value='0.00' />
+        <input type='text' name='meal-info' id='input-tax-rate' value='0.00' />
       </section>
-      <section class="tip">
+      <section class="meal-tip">
         <label for="meal-info" class="label-tip-percent">Tip Percentage: %</label>
-        <input type='text' name='meal-info' class='input-tip-percent' value='0.00' />
+        <input type='text' name='meal-info' id='input-tip-percent' value='0.00' />
       </section>
       <input type='submit' value='Submit'>
       <input type='submit' value='Cancel'>
@@ -32,8 +32,8 @@
   <section class="customer-charges">
     <heading>Customer Charges</heading>
     <section class="customer-container">
-      <span class="customer-subtotal">Subtotal 0.00</span>
-      <span class="customer-tip">Tip 0.00</span>
+      <span id="customer-subtotal">Subtotal 0.00</span>
+      <span id="customer-tip">Tip 0.00</span>
     </section>
     <span class="customer-total">Total 0.00</span>
 
@@ -41,9 +41,9 @@
   <section class="my-earnings-info">
     <heading>My Earnings Info</heading>
     <section class="earning-info-container">
-      <span class="earning-tip"></span>
-      <span class="earning-count"></span>
-      <span class="earnings-average"></span>
+      <span id="earning-tip"></span>
+      <span id="earning-count"></span>
+      <span id="earning-average"></span>
     </section>
   </section>
 </body>
