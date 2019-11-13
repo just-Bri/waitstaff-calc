@@ -12,7 +12,7 @@
   <header>Waitstaff Calculator</header>
   <section class="meal-details">
     <heading>Enter the Meal Details</heading>
-    <form action="submit" name='meal-info' class="js-meal-details">
+    <form action="submit" name='meal-info' id='meal-form' class="js-meal-details">
       <section class="meal-price">
         <label for="meal-info" class="label-base-price">Base Meal Price: $</label>
         <input type='text' name='meal-info' id='input-base-price' value='0.00' />
@@ -25,17 +25,17 @@
         <label for="meal-info" class="label-tip-percent">Tip Percentage: %</label>
         <input type='text' name='meal-info' id='input-tip-percent' value='0.00' />
       </section>
-      <input type='submit' value='Submit'>
-      <input type='submit' value='Cancel'>
+      <input type='submit' id='submit-meal' value='Calculate'>
+      <input type='submit' id='cancel-meal' value='Cancel'>
     </form>
   </section>
   <section class="customer-charges">
     <heading>Customer Charges</heading>
     <section class="customer-container">
-      <span id="customer-subtotal">Subtotal 0.00</span>
-      <span id="customer-tip">Tip 0.00</span>
+      <span id="customer-subtotal"></span>
+      <span id="customer-tip"></span>
+      <span id="customer-total"></span>
     </section>
-    <span class="customer-total">Total 0.00</span>
 
   </section>
   <section class="my-earnings-info">
@@ -46,6 +46,7 @@
       <span id="earning-average"></span>
     </section>
   </section>
+  <script type='text/javascript' src='src/main.js'></script>
 </body>
 
 </html>

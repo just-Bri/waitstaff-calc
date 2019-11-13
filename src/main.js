@@ -10,15 +10,28 @@
 
 // code lives here until I break it up into 'modules'
 
-// declare vars
-let inputBasePrice = document.getElementById('input-base-price');
-let inputTaxRate = document.getElementById('input-tax-rate');
-let inputTipPercent = document.getElementById('input-tip-percent');
+// Listen for submit
+document.getElementById('meal-form').addEventListener('click', function (e) {
+  e.preventDefault();
+  e.stopImmediatePropagation();
 
-let cusomterSubTotal = inputBasePrice * inputTaxRate;
-let customerTip = cusomterSubTotal * inputTipPercent;
-let customerTotal = cusomterSubTotal + customerTip;
+  // alert('submitted');
+  doMathStuff();
+});
 
-let earningTip = 0;
-let earningCount = 0;
-let earningAverage = 0;
+function doMathStuff() {
+  // declare vars
+  let inputBasePrice = (parseFloat(document.getElementById('input-base-price').value));
+  let inputTaxRate = (parseFloat(document.getElementById('input-tax-rate').value) * 0.01);
+  let inputTipPercent = (parseFloat(document.getElementById('input-tip-percent').value) * 0.01);
+
+  let customerSubtotal = document.getElementById('customer-subtotal');
+  let customerTip = document.getElementById('customer-tip');
+  let customerTotal = document.getElementById('customer-total');
+  // console.log(customerTotal);
+  // console.log('sub: ' + customerSubtotal.textContent);
+
+  customerSubtotal.textContent = `${inputBasePrice = inputBasePrice * inputTaxRate}`;
+  customerTip.textContent = `${inputBasePrice * inputTipPercent}`;
+  customerTotal.textContent = `${customerSubtotal + (inputBasePrice * inputTipPercent)}`;
+}
